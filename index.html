@@ -51,6 +51,11 @@
             11: {"title":"문제 11번", "type":"JP", "A":"J", "B":"P"},
             12: {"title":"문제 12번", "type":"JP", "A":"J", "B":"P"},
         }
+        var result = {
+            "ISTJ": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "ENFP": {"animal":"호랑이", "explain":"호랑이 설명", "img":"goat.jpg"},
+            "ENTJ": {"animal":"무무", "explain":"무무 설명", "img":"goat.jpg"},
+        }
         function start(){
             $(".start").hide();
             $(".question").show();
@@ -69,13 +74,24 @@
             if(num==13){ // 마지막 문제까지 완료
                 $(".question").hide();
                 $(".result").show();
+                var mbti = "";
+                ($("#EI").val()<2) ? mbti += "I" : mbti += "E";
+                ($("#SN").val()<2) ? mbti += "N" : mbti += "S";
+                ($("#TF").val()<2) ? mbti += "F" : mbti += "T";
+                ($("#JP").val()<2) ? mbti += "P" : mbti += "J";
+                alert(mbti);
+                $("#img").attr('src',result[mbti]["img"]);
+                $("#animal").html(result[mbti]["animal"]);
+                $("#explain").html(result[mbti]["explain"]);
             }
-            $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)'); // 속성값 바꾸는 문법
-            $("#title").html(q[num]["title"]);
-            $("#type").val(q[num]["type"]);
-            $("#A").html(q[num]["A"]);
-            $("#B").html(q[num]["B"]);
+            else {
+                $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)'); // 속성값 바꾸는 문법
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
             num++;
+            }
         }
     </script>
 </body>
