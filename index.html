@@ -25,8 +25,8 @@
         <button id="B" type="button" class="btn btn-primary mt-5" >보이면 안됌</button>
     </article>
     <article class="result">
-        <img id="img" class="rounded-circle mt-5" src="goat.jpg" alt="animal">
-        <h2 id="animal" class="text-center mt-5">동물이름</h2>
+        <img id="img" class="rounded-circle mt-5" src="goat.jpg" alt="ice">
+        <h2 id="ice" class="text-center mt-5">동물이름</h2>
         <h3 id="explain" class="text-center mt-5">설명</h3>
          <!-- Go to www.addthis.com/dashboard to customize your tools -->
          <div class="share addthis_inline_share_toolbox"></div>
@@ -55,22 +55,22 @@
             12: {"title":"여행이나 일을 할 때 나는?", "type":"JP", "A":"큰 틀이라도 계획을 세우고 진행한다.", "B":"계획은 세워봤자 지키기 힘들다! 세우지 않고 순발력으로 대처한다."},
         }
         var result = {
-            "ESTJ": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
-            "ESTP": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
-            "ESFJ": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
-            "ESFP": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
-            "ENTJ": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
-            "ENFJ": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
-            "ENFP": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
-            "ENTP": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
-            "ISTJ": {"animal":"호랑이", "explain":"호랑이 설명", "img":"goat.jpg"},
-            "ISTP": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
-            "ISFJ": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
-            "ISFP": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
-            "INTJ": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
-            "INFJ": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
-            "INFP": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
-            "INTP": {"animal":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "ESTJ": {"ice":"스크류바", "explain":"아이스크림 설명", "img":"scryu.jpg"},
+            "ESTP": {"ice":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "ESFJ": {"ice":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "ESFP": {"ice":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "ENTJ": {"ice":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "ENFJ": {"ice":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "ENFP": {"ice":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "ENTP": {"ice":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "ISTJ": {"ice":"호랑이", "explain":"호랑이 설명", "img":"goat.jpg"},
+            "ISTP": {"ice":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "ISFJ": {"ice":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "ISFP": {"ice":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "INTJ": {"ice":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "INFJ": {"ice":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "INFP": {"ice":"하마", "explain":"하마 설명", "img":"goat.jpg"},
+            "INTP": {"ice":"하마", "explain":"하마 설명", "img":"goat.jpg"},
             
             
         }
@@ -99,7 +99,7 @@
                 ($("#JP").val()<2) ? mbti += "P" : mbti += "J";
                 alert(mbti);
                 $("#img").attr('src',result[mbti]["img"]);
-                $("#animal").html(result[mbti]["animal"]);
+                $("#ice").html(result[mbti]["ice"]);
                 $("#explain").html(result[mbti]["explain"]);
             }
             else {
