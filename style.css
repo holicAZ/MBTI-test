@@ -1,15 +1,45 @@
-article {
-    display:flex;
-    flex-direction: column; /* 세로 정렬 */
+body{
+    
+    background-color: rgb(248, 239, 239);
 }
 
+
+
+.name{
+    display: block;
+    background-color: antiquewhite;
+    margin: auto;
+}
 .start{
+    
     margin-left: 20%;
     margin-right: 20%;
 }
-
+#start-button{
+    display: block;
+    margin: 0 auto;
+    width: 20rem;
+    height: 150px;
+    font-size: 25px;
+}
+#title{
+    display: flexbox;
+    font-size: 25px;
+    width: 40rem;
+    height: 100px;
+}
 .question{
     display: none;
+    width: 40rem;
+    height: auto;
+    margin: 0 auto;
+}
+
+#A, #B{
+    font-size: 20px;
+    width: 20rem;
+    height: 150px;
+    margin: auto;
 }
 
 .result{
@@ -17,13 +47,27 @@ article {
 }
 
 #img{
-    width: 500px;
-    height: 600px;
+    width: 300px;
+    height: 380px;
 
-    
     margin:0 auto; /* 가운데 배치 */
 }
 
 .share{
     margin:0 auto;
+}
+
+#explain{
+    background-color: rgb(247, 229, 207);
+    line-height: 180%;
+    margin: 0 auto;
+    width: 450px;
+    height: auto;
+    font-size:18px;
+}
+
+article {
+    
+    display:flex;
+    flex-direction: column; /* 세로 정렬 */
 }

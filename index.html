@@ -1,35 +1,51 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <html lang="ko">
+   
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"> <!-- 부트스트랩 수정을 위해선 사용자 css를 밑으로 선언-->
 </head>
-<body class="container"> <!-- 그리디 효과 주는 용도-->
+<style>
+     @font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+</style>
+<body class="container" style="font-family:TmoneyRoundWindExtraBold;"> <!-- 그리디 효과 주는 용도-->
+    <h1 class="mt-5 text-center">I C T I</h1>  <!-- t = margin-top : 5 -->
     <article class="start">
-        <h1 class="mt-5 text-center">ICE CREAM MBTI</h1>  <!-- t = margin-top : 5 -->
-        <h2 class="mt-5 text-center">나와 같은 성향의 아이스크림은..?</h2>  <!-- t = margin-top : 5 -->
-        <button type="button" class="start btn btn-primary mt-5" onclick='start();'>테스트 시작하기</button>
+        <h1 class="mt-5 text-center">아이스크림 성격유형 테스트~!</h1><br><br>  <!-- t = margin-top : 5 -->
+        <h3 class="mt-5 text-center">나와 같은 성향의 아이스크림은..?</h3>  <!-- t = margin-top : 5 -->
+        <br><br><br><br><br>
+        <button type="button" id="start-button" class="start btn btn-info mt-5" onclick='start();'>아이스크림 사러가기</button>
     </article>
     
     <article class="question">
-        <div class="progress mt-5">
-            <div class="progress-bar" role="progressbar" style="width: clac(100/12*3%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress mt-5 mb-5">
+            <div class="progress-bar bg-info" role="progressbar" style="width: clac(100/12*3%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
-          
-        <h2 id="title" class="text-center mt-5">문제</h2>
-        <input id="type" type="hidden" value="EI">
-        <button id="A" type="button" class="btn btn-primary mt-5" >보이면 안됌</button>
-        <button id="B" type="button" class="btn btn-primary mt-5" >보이면 안됌</button>
+        
+            <h2 id="title" class="text-center mt-5">문제</h2>
+            <input id="type" type="hidden" value="EI">
+            <button id="A" type="button" class="btn btn-info mt-5" >보이면 안됌</button>
+            <button id="B" type="button" class="btn btn-info mt-5" >보이면 안됌</button>
+        
     </article>
     <article class="result">
-        <img id="img" class="rounded-circle mt-5" src="goat.jpg" alt="ice">
-        <h2 id="ice" class="text-center mt-5">동물이름</h2>
+        <img id="img" class="rounded  border border-5 " src="goat.jpg" alt="ice">
+        <h2 id="ice" class="name text-center mt-5">아이스크림 이름</h2>
+        <h3 class="text-center mt-5">그들은 이런 맛..!</h3>
         <h3 id="explain" class="text-center mt-5">설명</h3>
+        
          <!-- Go to www.addthis.com/dashboard to customize your tools -->
-         <div class="share addthis_inline_share_toolbox"></div>
+         <div class="share addthis_inline_share_toolbox mt-5"></div>
     </article>
     <input type="hidden" id="EI" value="0"> <!-- 점수를 매기기 위한 점수판 hidden으로 출력 x -->
     <input type="hidden" id="SN" value="0">
@@ -42,8 +58,8 @@
         var num = 1;
         var q = { // 문제 정보 객체로 저장
             1: {"title":"사람을 만나는 자리는 나에게? ", "type":"EI", "A":"사람만나는 자리는 언제나 새롭다.", "B":"모르는 사람이 있으면 꺼려진다."},
-            2: {"title":"약속을 잡을 때 나는?", "type":"EI", "A":"주도적으로 모은다.", "B":"대부분 불리는 입장이다."},
-            3: {"title":"팀과제를 하게 되었을 때 나는?", "type":"EI", "A":"답답함을 못 이기고 소통을 위해 먼저 말을 건다.", "B":"누군가 말 할 때 까지 기다린다."},
+            2: {"title":"약속을 잡을 때 나는?      ", "type":"EI", "A":"주도적으로 모은다.", "B":"대부분 불리는 입장이다."},
+            3: {"title":"팀과제를 하게 되었을 때 나는?       ", "type":"EI", "A":"답답함을 못 이기고 소통을 위해 먼저 말을 건다.", "B":"누군가 말 할 때 까지 기다린다."},
             4: {"title":"여행을 가려고 한다", "type":"SN", "A":"길을 헤매는게 이제는 익숙하다.", "B":"지도만 있으면 어디든 갈 수 있다."},
             5: {"title":"TV에서 사고 뉴스가 나오고 있다. 나는 이때", "type":"SN", "A":"피해자가 먼저 걱정이 된다.", "B":"왜 그런 사고가 일어났는지 궁금해 한다."},
             6: {"title":"연애에 있어서 나는?", "type":"SN", "A":"사람은 한 번 봐서는 모른다. 계속 만나봐야 알지.", "B":"처음 만났을 때 느낌이 중요하다."},
@@ -55,7 +71,16 @@
             12: {"title":"여행이나 일을 할 때 나는?", "type":"JP", "A":"큰 틀이라도 계획을 세우고 진행한다.", "B":"계획은 세워봤자 지키기 힘들다! 세우지 않고 순발력으로 대처한다."},
         }
         var result = {
-                "ESTJ": {"ice":"와", "explain":"성격 설명", "img":"estj.png"},
+            "ESTJ": {"ice":"와", "explain":"♡ 간단한 것이라도 계획을 세우는 걸 좋아해요. 무엇보다 세운 계획이 틀어지는 걸 매우 싫어 한답니다. (즉흥은 자제해주세요)<br>" +
+            "♥ 성격이 깐깐한 편이죠. 무언가를 구입할때는 유용하지만 자칫 잘못하면 꼰대가 될 수도..<br>" +
+            "♡ 관습과 자신의 방법이 바뀌는 걸 좋아하진 않아요. 그들은 꽤나 보수적이거든요.<br>" +
+            "♥ 남에 대해 관심이 많지 않아요. 대신 자기에 대한 관심은 끝이 없죠.<br>" +
+            "♡ 낙천적인 성향을 싫어해요. 왜냐하면 그들은 현실주의자거든요.<br>" +
+            "♥ 같이 일하는 사람이 일처리를 못하면 정말 답답하고, 화가나요.<br>" +
+            "♡ 나서는 걸 별로 좋아하지 않아서 자진하진 않지만 리더를 맡게되면 일은 누구보다 잘해요.<br>" +
+            "♥ 한 번 시작한 일은 끝을 보려고해요. 중간에 포기하는 일따위 그들에게는 없죠.<br>" +
+            "♡ 아무리 친구라도 따질 때는 주관을 제외하고, 사실과 논리만을 고려해서 말하기 때문에 팩폭주의!<br>"+
+            "♥ 공감능력이 부족하기에 남의 푸념에 건조한 반응을 보일때도 있어요.", "img":"estj.png"},
             "ESTP": {"ice":"스크류바", "explain":"성격 설명", "img":"estp.png"},
             "ESFJ": {"ice":"투게더", "explain":"성격 설명", "img":"esfj.png"},
             "ESFP": {"ice":"옥동자", "explain":"성격 설명", "img":"esfp.png"},
