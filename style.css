@@ -56,14 +56,24 @@ body{
 .share{
     margin:0 auto;
 }
+.explain_field{
+    display: flexbox;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    text-align: left;
+}
 
 #explain{
     background-color: rgb(247, 229, 207);
-    line-height: 180%;
-    margin: 0 auto;
-    width: 450px;
+    line-height: 190%; /* 장평 높이*/
+    width: 440px;
     height: auto;
-    font-size:18px;
+    margin: 0 auto;
+    font-size:15px;
+    letter-spacing:normal;
+    
+    word-break: keep-all;
 }
 
 article {
