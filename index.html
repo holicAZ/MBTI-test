@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <html lang="ko">
    
 <head>
@@ -19,9 +19,9 @@
 }
 </style>
 <body class="container" style="font-family:TmoneyRoundWindExtraBold;"> <!-- 그리디 효과 주는 용도-->
-    <h1 class="mt-5 text-center">I C T I</h1>  <!-- t = margin-top : 5 -->
+    <h1 class="icti mt-5 text-center"> I C T I </h1>  <!-- t = margin-top : 5 -->
     <article class="start">
-        <h1 class="mt-5 text-center">아이스크림 성격유형 테스트~!</h1><br><br>  <!-- t = margin-top : 5 -->
+        <h1 class="mt-5 text-center">아이스크림 성격유형 테스트</h1><br><br>  <!-- t = margin-top : 5 -->
         <h3 class="mt-5 text-center">나와 같은 성향의 아이스크림은..?</h3>  <!-- t = margin-top : 5 -->
         <br><br><br><br><br>
         <button type="button" id="start-button" class="start btn btn-info mt-5" onclick='start();'>아이스크림 사러가기</button>
@@ -29,20 +29,20 @@
     
     <article class="question">
         <div class="progress mt-5 mb-5">
-            <div class="progress-bar bg-info" role="progressbar" style="width: clac(100/12*3%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-info" role="progressbar" style="width: auto" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
-        
-            <h2 id="title" class="text-center mt-5">문제</h2>
+            <h2 class="text-center mt-4">Q</h2>
+            <h2 id="title" class="text-center mt-2">문제</h2>
             <input id="type" type="hidden" value="EI">
-            <button id="A" type="button" class="btn btn-info mt-5" >보이면 안됌</button>
-            <button id="B" type="button" class="btn btn-info mt-5" >보이면 안됌</button>
+            <button id="A" type="button" class="btn btn-info mt-1" >보이면 안됌</button>
+            <button id="B" type="button" class="btn btn-info mt-4" >보이면 안됌</button>
         
     </article>
     <article class="result">
-        <img id="img" class="rounded  mt-5" src="goat.jpg" alt="ice">
+        <img id="img" class="rounded  mt-5" src="" alt="ice">
         <h2 id="ice" class="name text-center mt-5">아이스크림 이름</h2>
         <h3 class="what text-center mt-5">그들은 이런 맛..!</h3>
-        <div class="explain_feild"><h4 id="explain" class="text-sm-center mt-2">설명</h4></div>
+        <h4 id="explain" class="text-center mt-2">설명</h4>
         <div class="relation"> 
             
             <span id="g_r">환상의 캐미</span><br>  
@@ -70,12 +70,12 @@
             1: {"title":"사람을 만나는 자리는 나에게? ", "type":"EI", "A":"사람만나는 자리는 언제나 새롭다.", "B":"모르는 사람이 있으면 꺼려진다."},
             2: {"title":"약속을 잡을 때 나는?      ", "type":"EI", "A":"주도적으로 모은다.", "B":"대부분 불리는 입장이다."},
             3: {"title":"팀과제를 하게 되었을 때 나는?       ", "type":"EI", "A":"답답함을 못 이기고 소통을 위해 먼저 말을 건다.", "B":"누군가 말 할 때 까지 기다린다."},
-            4: {"title":"여행을 가려고 한다", "type":"SN", "A":"길을 헤매는게 이제는 익숙하다.", "B":"지도만 있으면 어디든 갈 수 있다."},
+            4: {"title":"여행을 가려는 나는?", "type":"SN", "A":"길을 헤매는게 이제는 익숙하다.", "B":"지도만 있으면 어디든 갈 수 있다."},
             5: {"title":"TV에서 사고 뉴스가 나오고 있다. 나는 이때", "type":"SN", "A":"피해자가 먼저 걱정이 된다.", "B":"왜 그런 사고가 일어났는지 궁금해 한다."},
             6: {"title":"연애에 있어서 나는?", "type":"SN", "A":"사람은 한 번 봐서는 모른다. 계속 만나봐야 알지.", "B":"처음 만났을 때 느낌이 중요하다."},
-            7: {"title":"일에 있어 나는?", "type":"TF", "A":"과정은 중요하지 않아! 결과만 좋으면 된다.", "B":"결과는 비록 별로라도 과정에 있어 노력했다면 인정이지!"},
-            8: {"title":"친구와 술자리에서 서운한 걸 얘기하고 있다.", "type":"TF", "A":"논리정연하게 말해줄 수 있어.", "B":"관계가 나빠질까봐 말 못하겠어."},
-            9: {"title":"친구에게 시험 떨어진 것을 말했는데 친구가 점수부터 묻는다. 이때 나는?", "type":"TF", "A":"점수를 말해 주면서 몇점이 부족한지 다시 되새긴다.", "B":"친구가 떨어진 슬픔에 공감하지 않아줘서 서운하다."},
+            7: {"title":"일에 있어 나는?", "type":"TF", "A":"결과만 좋으면 과정은 상관없다.", "B":"노력의 과정이 결과보다 중요하다."},
+            8: {"title":"친구와 술자리에서 서운한 걸 얘기하고 있다.", "type":"TF", "A":"논리정연하게 말해줄 수 있다.", "B":"관계가 나빠질까봐 말 못하겠다."},
+            9: {"title":"친구에게 시험 떨어진 것을 말했는데 친구가 점수부터 묻는다. 이때 나는?", "type":"TF", "A":"아무렇지 않게 점수를 말해 준다.", "B":"친구가 떨어진 슬픔에 공감하지 않아줘서 서운하다."},
             10: {"title":"어떤 일을 결정해야 하는 상황에서 나는?", "type":"JP", "A":"따져보고 확실한 결정을 할 수 있다.", "B":"결정하기 어려워 피하거나 미룬다."},
             11: {"title":"지금 내 방을 둘러보자.", "type":"JP", "A":"깔끔하고, 원래 있던 자리에 물건이 있다.", "B":"남이 보기엔 지저분 할 수도 있지만 내가 쓰기에 최적화 되어있는 배치이다."},
             12: {"title":"여행이나 일을 할 때 나는?", "type":"JP", "A":"큰 틀이라도 계획을 세우고 진행한다.", "B":"계획은 세워봤자 지키기 힘들다! 세우지 않고 순발력으로 대처한다."},
@@ -153,7 +153,7 @@
                 "<p>♥ 관심종자의 기질이.. 그래서 남 앞에 나서는 걸 좋아해요.</p>"+
                 "<p>♡ 하고 싶은 건 꼭 해야 직성이 풀리고, 무엇보다 멋이 중요해요.</p>"+
                 "<p>♥ 이랬다저랬다 하는 기질이 강해요. 가끔은 스스로가 이해 안 될 때가 있어요.</p>", "img":"enfp.png","good":"intj","bad":"esfj"},
-            "ENTP": {"ice":"독특하고 새로운 생각의 원천 &quot;생귤탱귤&quot;", "explain":"<p>♡ 고집이 세서 내 말대로 이루어져서 직성이 풀려요.</p>"+
+            "ENTP": {"ice":"독특하고 새로운 생각의 원천 &quot;생귤탱귤&quot;", "explain":"<p>♡ 고집이 세서 내 말대로 이루어져야 직성이 풀려요.</p>"+
                 "<p>♥ 친구들에게 장난치고, 괴롭히는게 세상에서 제일 재밌어요. 특히 귀여운 친구들은 못 참지..</p>"+
                 "<p>♡ 여행 계획은 잘 짜는데 막상 내가 잘 안 지켜요.</p>"+
                 "<p>♥ 외로움을 많이 타서 친구들을 많이 만들어요. 하지만 혼자만의 시간도 꼭 필요해요.</p>"+
@@ -268,14 +268,17 @@
         });
         function next(){
             if(num==13){ // 마지막 문제까지 완료
+               
                 $(".question").hide();
+                
                 $(".result").show();
+                test();
                 var mbti = "";
                 ($("#EI").val()<2) ? mbti += "I" : mbti += "E";
                 ($("#SN").val()<2) ? mbti += "N" : mbti += "S";
                 ($("#TF").val()<2) ? mbti += "F" : mbti += "T";
                 ($("#JP").val()<2) ? mbti += "P" : mbti += "J";
-                alert(mbti);
+                
                 $("#img").attr('src',result[mbti]["img"]);
                 $("#ice").html(result[mbti]["ice"]);
                 $("#explain").html(result[mbti]["explain"]);
@@ -299,7 +302,64 @@
             num++;
             }
         }
+        function test() {
+            LoadingWithMask();
+            setTimeout("closeLoadingWithMask()", 1000);
+        }
+
+        function LoadingWithMask() {
+            //화면의 높이와 너비를 구합니다.
+            var maskHeight = document.body.scrollHeight;
+            var maskWidth  = document.body.scrollWidth;
+            
+            //화면에 출력할 마스크를 설정해줍니다.
+            var mask       ="<div id='mask' style='position:absolute; z-index:9000; background-color:#F15124; display:none; left:0; top:0;'></div>";
+            var loadingImg ='';
+            
+            loadingImg +="<div id='loadingImg'>";
+            loadingImg +=" <img src='spin.gif' style='position: relative; display: block; margin: 0px auto;'/>";
+            loadingImg +="</div>"; 
+        
+            //화면에 레이어 추가
+            $('body')
+                .append(mask)
+                .append(loadingImg)
+                
+            //마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채웁니다.
+            $('#mask').css({
+                    'width' : '100%'
+                    ,'height': '100%'
+                    , 'opacity': 0.3
+            });
+        
+            //마스크 표시
+            $('#mask').show();  
+        
+            //로딩중 이미지 표시
+            $('#loadingImg').show();
+        }
+
+        function closeLoadingWithMask() {
+            $('#mask, #loadingImg').hide();
+            $('#mask, #loadingImg').empty(); 
+        }
+
+        document.documentElement.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault(); 
+            } 
+        }, false);
+
+        var lastTouchEnd = 0; 
+
+        document.documentElement.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault(); 
+            } lastTouchEnd = now; 
+        }, false);
     </script>
+    
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-601a1a436dcaeb60"></script>
 

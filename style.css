@@ -1,10 +1,15 @@
 body{
     
+    height: 100vh;
     background-color: #83C4E1;
 }
-
-h1{
+html{
+    height: 100vh; 
+}
+h1,h3{
+   
     text-shadow: 0 0 20px rgb(253, 220, 220);
+    word-break: keep-all;
 }
 
 .name{
@@ -15,27 +20,33 @@ h1{
 }
 .start{
     
-    margin-left: 20%;
-    margin-right: 20%;
+    margin: auto;
 }
 #start-button{
     display: block;
     margin: 0 auto;
-    width: 20rem;
-    height: 150px;
+    width: auto;
+    min-height: 130px;
+    height: auto;
     font-size: 25px;
+    
 }
 #title{
     display: flexbox;
     font-size: 25px;
-    width: 40rem;
+    width: auto;
     height: 100px;
+    text-shadow: 0 0 30px rgb(255, 255, 255);
+    word-break: keep-all;
+}
+.progress{
+    
 }
 .question{
     display: none;
-    width: 40rem;
+    width: auto;
     height: auto;
-    margin: 0 auto;
+    margin: auto;
 }
 
 #A, #B{
@@ -43,10 +54,23 @@ h1{
     width: 20rem;
     height: 150px;
     margin: auto;
+    word-break: keep-all;
+    background-color: #4fabc7;
+    border-color: #c5e6fa;
 }
 
+#A, #B:hover   {
+    
+}
+
+.btn-info.focus, .btn-info:focus {
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    outline: 0;
+}
 .relation{
     margin: auto;
+    
 }
 #good, #bad{
     width: 100px;
@@ -57,6 +81,7 @@ h1{
     display: block;
     margin-top: 20px;
     margin-bottom: -60px;
+    
 }
 #g_r{
     text-shadow: 0 0 3px #00f7ff;
@@ -64,15 +89,19 @@ h1{
 #b_r{
     text-shadow: 0 0 3px #ff0909;
 }
+#goodice, #badice{
+    font-size: 12px;
+}
 .result{
     display: none;
     background-color: #ffffffe3;
+    margin: auto;
 }
+
 
 #img{
     width: 280px;
     height: 320px;
-
     margin:0 auto; /* 가운데 배치 */
     margin-bottom: -40px;
 }
@@ -81,7 +110,7 @@ h1{
     margin:0 auto;
 }
 .explain_field{
-    display: flexbox;
+    
     width: auto;
     height: auto;
     margin: 0 auto;
@@ -91,9 +120,9 @@ h1{
 #explain{
     background-color: #94e9fa;
     line-height: 190%; /* 장평 높이*/
-    width: 440px;
-    height: auto;
-    margin: 0 auto;
+   
+    margin-right: 3%;
+    margin-left: 3%;
     font-size:15px;
     letter-spacing:normal;
     
@@ -104,6 +133,8 @@ article {
     
     display:flex;
     flex-direction: column; /* 세로 정렬 */
+    max-width: 360px;
+    
 }
 
 .name{
