@@ -1,13 +1,16 @@
 body{
     
-    background-color: rgb(248, 239, 239);
+    background-color: #83C4E1;
 }
 
-
+h1{
+    text-shadow: 0 0 20px rgb(253, 220, 220);
+}
 
 .name{
     display: block;
-    background-color: antiquewhite;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 3px #fdb4b4;
     margin: auto;
 }
 .start{
@@ -42,15 +45,36 @@ body{
     margin: auto;
 }
 
+.relation{
+    margin: auto;
+}
+#good, #bad{
+    width: 100px;
+    height: 150px;
+}
+#g_r, #b_r{
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: -60px;
+}
+#g_r{
+    text-shadow: 0 0 3px #00f7ff;
+}
+#b_r{
+    text-shadow: 0 0 3px #ff0909;
+}
 .result{
     display: none;
+    background-color: #ffffffe3;
 }
 
 #img{
-    width: 300px;
-    height: 380px;
+    width: 280px;
+    height: 320px;
 
     margin:0 auto; /* 가운데 배치 */
+    margin-bottom: -40px;
 }
 
 .share{
@@ -65,7 +89,7 @@ body{
 }
 
 #explain{
-    background-color: rgb(247, 229, 207);
+    background-color: #94e9fa;
     line-height: 190%; /* 장평 높이*/
     width: 440px;
     height: auto;
@@ -80,4 +104,17 @@ article {
     
     display:flex;
     flex-direction: column; /* 세로 정렬 */
+}
+
+.name{
+    font-size:25px;
+    word-break: keep-all;
+}
+
+.what{
+    margin: auto;
+    font-size: 20px;
+    
+    color: rgb(104, 238, 187);
+    text-shadow: 0 0 3.2px #000000;
 }
