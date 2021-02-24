@@ -110,7 +110,7 @@ h3 {
 }
 
 .share {
-  margin: 0 auto;
+  margin-left: 20%;
 }
 .explain_field {
   width: auto;
@@ -183,4 +183,17 @@ article {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.kakao_ad1{
+  width: 320px;
+  margin: auto;
+}
+
+.admin{
+  width: 320px;
+  margin: auto;
+  line-height: 160%; /* 장평 높이*/
+  opacity: 0.5;
+  color: rgb(60, 108, 163);
 }
