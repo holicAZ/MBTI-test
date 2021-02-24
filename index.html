@@ -19,7 +19,7 @@
 }
 </style>
 <body class="container" style="font-family:TmoneyRoundWindExtraBold;"> <!-- 그리디 효과 주는 용도-->
-    <h1 class="icti mt-5 text-center"> I C T I </h1>  <!-- t = margin-top : 5 -->
+    <h1 class="icti mt-5 text-center"> &lt; &nbsp; I C T I &nbsp; &gt; </h1>  <!-- t = margin-top : 5 -->
     <article class="start">
         <h1 class="mt-5 text-center">아이스크림 성격유형 테스트</h1><br><br>  <!-- t = margin-top : 5 -->
         <h3 class="mt-5 text-center">나와 같은 성향의 아이스크림은..?</h3>  <!-- t = margin-top : 5 -->
@@ -39,7 +39,9 @@
         
     </article>
     <article class="result">
-        <img id="img" class="rounded  mt-5" src="" alt="ice">
+        <div class="loader"></div>
+        <div class="container" style="display:none;">
+        <img id="img" class="rounded mt-1" src="" alt="ice">
         <h2 id="ice" class="name text-center mt-5">아이스크림 이름</h2>
         <h3 class="what text-center mt-5">그들은 이런 맛..!</h3>
         <h4 id="explain" class="text-center mt-2">설명</h4>
@@ -56,6 +58,7 @@
         </div>
          <!-- Go to www.addthis.com/dashboard to customize your tools -->
          <div class="share addthis_inline_share_toolbox mt-5"></div>
+        </div>
     </article>
     <input type="hidden" id="EI" value="0"> <!-- 점수를 매기기 위한 점수판 hidden으로 출력 x -->
     <input type="hidden" id="SN" value="0">
@@ -270,9 +273,9 @@
             if(num==13){ // 마지막 문제까지 완료
                
                 $(".question").hide();
-                
                 $(".result").show();
                 test();
+
                 var mbti = "";
                 ($("#EI").val()<2) ? mbti += "I" : mbti += "E";
                 ($("#SN").val()<2) ? mbti += "N" : mbti += "S";
@@ -303,11 +306,11 @@
             }
         }
         function test() {
-            LoadingWithMask();
-            setTimeout("closeLoadingWithMask()", 1000);
+            
+            setTimeout("_showPage()", 3000);
         }
 
-        function LoadingWithMask() {
+        /*function LoadingWithMask() {
             //화면의 높이와 너비를 구합니다.
             var maskHeight = document.body.scrollHeight;
             var maskWidth  = document.body.scrollWidth;
@@ -321,7 +324,7 @@
             loadingImg +="</div>"; 
         
             //화면에 레이어 추가
-            $('body')
+            $('.result')
                 .append(mask)
                 .append(loadingImg)
                 
@@ -337,7 +340,7 @@
         
             //로딩중 이미지 표시
             $('#loadingImg').show();
-        }
+        } */
 
         function closeLoadingWithMask() {
             $('#mask, #loadingImg').hide();
@@ -358,6 +361,14 @@
                 event.preventDefault(); 
             } lastTouchEnd = now; 
         }, false);
+
+        function _showPage() {
+            
+            var loader=$("div.loader");
+            var container = $("div.container");
+            loader.css("display","none");
+            container.css("display","block");
+        }
     </script>
     
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
