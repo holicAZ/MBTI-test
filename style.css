@@ -197,3 +197,14 @@ article {
   opacity: 0.5;
   color: rgb(60, 108, 163);
 }
+
+a{
+  color: #83e9f0;
+  font-size: 18px;
+  text-shadow: 0 0 2px #000000;
+  margin-left: 12%;
+}
+a:hover{
+  color: #ee6969;
+  text-decoration: none;
+}
